@@ -13,7 +13,7 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/kontakte'
   .catch(err => console.error('Datenbank-Fehler:', err));
 
 app.get('/api/contacts', (req, res) => {
-  res.send('Hier kommen die Kontakte!');
+  res.send('Hier sind die Kontakte!');
 });
 
 app.listen(PORT, () => {
