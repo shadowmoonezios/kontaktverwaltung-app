@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 5000;
 app.use(cors());
 app.use(express.json());
 
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/kontakte', { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/kontakte', { useNewUrlParser: true, useUnifiedTopology: true, serverSelectionTimeoutMS: 5000 })
   .then(() => console.log('Datenbank verbunden!'))
   .catch(err => console.error('Datenbank-Fehler:', err));
 
